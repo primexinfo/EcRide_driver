@@ -1,6 +1,13 @@
 # Built application files
+<<<<<<< HEAD
 
 *.ap_
+=======
+*.apk
+*.aar
+*.ap_
+*.aab
+>>>>>>> 997b30293b55780be53f0347fba80b0639c5c844
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -12,6 +19,11 @@
 bin/
 gen/
 out/
+<<<<<<< HEAD
+=======
+#  Uncomment the following line in case you need and you don't have the release build type files in your app
+# release/
+>>>>>>> 997b30293b55780be53f0347fba80b0639c5c844
 
 # Gradle files
 .gradle/
@@ -40,11 +52,31 @@ captures/
 .idea/assetWizardSettings.xml
 .idea/dictionaries
 .idea/libraries
+<<<<<<< HEAD
 .idea/caches
 .idea/caches/build_file_checksums.ser
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
+=======
+# Android Studio 3 in .gitignore file.
+.idea/caches
+.idea/modules.xml
+# Comment next line if keeping position of elements in Navigation Editor is relevant for you
+.idea/navEditor.xml
+
+# Keystore files
+# Uncomment the following lines if you do not want to check your keystore files in.
+#*.jks
+#*.keystore
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+.cxx/
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
+>>>>>>> 997b30293b55780be53f0347fba80b0639c5c844
 
 # Freeline
 freeline.py
@@ -57,3 +89,16 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+<<<<<<< HEAD
+=======
+
+# Version control
+vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+# lint/reports/
+>>>>>>> 997b30293b55780be53f0347fba80b0639c5c844
