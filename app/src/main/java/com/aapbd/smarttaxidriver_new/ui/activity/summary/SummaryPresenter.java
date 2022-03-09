@@ -1,0 +1,25 @@
+package com.aapbd.smarttaxidriver_new.ui.activity.summary;
+
+
+import com.aapbd.smarttaxidriver_new.base.BasePresenter;
+import com.aapbd.smarttaxidriver_new.data.network.APIClient;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
+
+public class SummaryPresenter<V extends SummaryIView> extends BasePresenter<V> implements SummaryIPresenter<V> {
+    @Override
+    public void getSummary() {
+        getCompositeDisposable().add(
+                APIClient
+                        .getAPIClient()
+                        .getSummary("")
+                        .subscribeOn(Schedulers.computation())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                trendsResponse -> getMvpView().onSuccess(trendsResponse),
+                                throwable -> getMvpView().onError(throwable)
+                        )
+        );
+    }
+}

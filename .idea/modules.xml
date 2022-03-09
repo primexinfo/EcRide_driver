@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smarttaxi-driver.iml" filepath="$PROJECT_DIR$/.idea/modules/smarttaxi-driver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/smarttaxi-driver.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/smarttaxi-driver.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/braintreepayment/smarttaxi-driver.braintreepayment.iml" filepath="$PROJECT_DIR$/.idea/modules/braintreepayment/smarttaxi-driver.braintreepayment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nativechekoutpaypal/smarttaxi-driver.nativechekoutpaypal.iml" filepath="$PROJECT_DIR$/.idea/modules/nativechekoutpaypal/smarttaxi-driver.nativechekoutpaypal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/paytmpayment/smarttaxi-driver.paytmpayment.iml" filepath="$PROJECT_DIR$/.idea/modules/paytmpayment/smarttaxi-driver.paytmpayment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stripepayment/smarttaxi-driver.stripepayment.iml" filepath="$PROJECT_DIR$/.idea/modules/stripepayment/smarttaxi-driver.stripepayment.iml" />
+    </modules>
+  </component>
+</project>

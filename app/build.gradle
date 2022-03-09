@@ -1,0 +1,188 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    signingConfigs {
+        release {
+            keyAlias 'keydata.keystore'
+            keyPassword '123456'
+            storeFile file('jks/keydata.keystore')
+            storePassword '123456'
+        }
+
+    }
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId 'com.aapbd.smarttaxidriver_new'
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 9
+        versionName "1.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        resValue "string", "app_name", "SmartTaxi Driver"
+
+        resValue "string", "google_map_key", "AIzaSyDyf9lev6kZA6EtK-QDBjSgu8xapkIRkXw" // smarttaxi driver key
+        resValue "string", "FACEBOOK_APP_ID", "518754458611681"
+        resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "7787c022811f10d3688df1b0fe9832c5"
+        resValue "string", "default_notification_channel_id", "SmartTaxiDriver"
+        resValue "string", "google_signin_server_client_id", "273190016029-84iogl1vj566pvfa983fqsrge1o7scck.apps.googleusercontent.com"
+
+
+        buildConfigField "String", "BASE_URL", '"https://smarttaxi.aapbd.com/"'
+
+        buildConfigField "String", "BASE_IMAGE_URL", '"https://smarttaxi.aapbd.com/storage/"'
+        buildConfigField "String", "CLIENT_SECRET", '"XCVuLcGkDJsVfaOXFW9qK56Ho6dsodkPheZTUjZq"'
+        buildConfigField "String", "TERMS_CONDITIONS", '"https://smarttaxi.aapbd.com/terms"'
+
+
+        buildConfigField "String", "USER_PACKAGE", '"com.aapbd.smarttaxinew"'
+        buildConfigField "String", "CLIENT_ID", '"2"'
+        buildConfigField "String", "DEVICE_TYPE", '"android"'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+        debug {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.applicationId}_V${variant.versionCode}_VN-${variant.versionName}_" + new Date().format('yyyy-MM-dd') + ".apk"
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    /*      dimen       */
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.5'
+
+    /*      multi dex       */
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //      Retrofit
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+
+    //      butter knife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    implementation project(path: ':stripepayment')
+    implementation 'com.google.firebase:firebase-crashlytics:18.1.0'
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+
+    /*      Glide       */
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    /*      Maps        */
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.maps:google-maps-services:0.2.7'
+    implementation 'com.google.maps.android:android-maps-utils:0.6.2'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+
+    /*      circleImageView     */
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    /*      fire base       */
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+
+    /*      toasty      */
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+    /*      easy image      */
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+
+    /*      easy permissions        */
+    implementation 'pub.devrel:easypermissions:1.2.0'
+
+    /*      facebook        */
+    implementation 'com.facebook.android:facebook-login:5.13.0'
+
+    /*      event bus       */
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    /*      stetho      */
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    /*      direction library       */
+    implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+
+    /*      pin view        */
+    implementation 'com.chaos.view:pinview:1.3.2'
+
+    /*      lottie      */
+    implementation 'com.airbnb.android:lottie:3.3.1'
+
+    /*      fire base chat      */
+    implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
+
+    //      payment gateway...
+    implementation 'com.braintreepayments:card-form:5.1.1'
+    implementation 'com.braintreepayments.api:braintree:2.18.1'
+    implementation 'com.stripe:stripe-android:9.0.1'
+
+    implementation 'id.zelory:compressor:2.1.0'
+
+    //QR code scan
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+
+    //FloatingView
+    implementation 'com.github.recruit-lifestyle:FloatingView:2.4.0'
+
+    // AppBajar library
+    implementation 'com.aapbd:appbajar-lib:1.0.2'
+
+    //      Rx https://github.com/ReactiveX/RxAndroid
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+
+}

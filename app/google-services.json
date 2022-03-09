@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "986059076689",
+    "firebase_url": "https://smarttaxi-900a3.firebaseio.com",
+    "project_id": "smarttaxi-900a3",
+    "storage_bucket": "smarttaxi-900a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986059076689:android:21bf6ad5cd3df6b80d7470",
+        "android_client_info": {
+          "package_name": "com.aapbd.smarttaxidriver_new"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986059076689-fht8jifsss4kokuuhq2jh6i3u39s63ak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aapbd.smarttaxidriver_new",
+            "certificate_hash": "fb06128c3aa13cd197631c275f8f49ed68971ca8"
+          }
+        },
+        {
+          "client_id": "986059076689-lnpifu82r59cf6811df8r3oup63rm1j0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aapbd.smarttaxidriver_new",
+            "certificate_hash": "ff6051ca39e438167e9088f313ef6db2d1bd923d"
+          }
+        },
+        {
+          "client_id": "986059076689-7a9h1bfd21c5fko06ueuioo1tgvr3cub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV7bRHK7_6tFdYg4thCgSwQIgJtyRFVWM"
+        },
+        {
+          "current_key": "AIzaSyC6PfXN7Mc-7FuQ_SWG_zsOy-z11KPGGV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986059076689-7a9h1bfd21c5fko06ueuioo1tgvr3cub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986059076689:android:a33ce3da92c739ea0d7470",
+        "android_client_info": {
+          "package_name": "com.aapbd.smarttaxinew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986059076689-bddokb3b20i6rgcehqnilim7q8924nh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aapbd.smarttaxinew",
+            "certificate_hash": "ff6051ca39e438167e9088f313ef6db2d1bd923d"
+          }
+        },
+        {
+          "client_id": "986059076689-e6to1q8k20u6dto3egak8k46chijp37i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aapbd.smarttaxinew",
+            "certificate_hash": "fb06128c3aa13cd197631c275f8f49ed68971ca8"
+          }
+        },
+        {
+          "client_id": "986059076689-g48m7pckhdmqceqt65ueklekdq0kl0ka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aapbd.smarttaxinew",
+            "certificate_hash": "efdd56ea106eeeb94d5935d55da0bf0be3605019"
+          }
+        },
+        {
+          "client_id": "986059076689-7a9h1bfd21c5fko06ueuioo1tgvr3cub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV7bRHK7_6tFdYg4thCgSwQIgJtyRFVWM"
+        },
+        {
+          "current_key": "AIzaSyC6PfXN7Mc-7FuQ_SWG_zsOy-z11KPGGV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986059076689-7a9h1bfd21c5fko06ueuioo1tgvr3cub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
